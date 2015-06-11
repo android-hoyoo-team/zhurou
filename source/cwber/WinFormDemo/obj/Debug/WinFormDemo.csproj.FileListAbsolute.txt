@@ -37,3 +37,20 @@ F:\ChromeWebBrowser.net-realse-1.1.0.0 (1)\ChromeWebBrowser.net-realse-1.1.0.0\s
 F:\ChromeWebBrowser.net-realse-1.1.0.0 (1)\ChromeWebBrowser.net-realse-1.1.0.0\source\cwber\WinFormDemo\assets\output\cwber.pdb
 F:\ChromeWebBrowser.net-realse-1.1.0.0 (1)\ChromeWebBrowser.net-realse-1.1.0.0\source\cwber\WinFormDemo\assets\output\Cef3.pdb
 F:\ChromeWebBrowser.net-realse-1.1.0.0 (1)\ChromeWebBrowser.net-realse-1.1.0.0\source\cwber\WinFormDemo\assets\output\Cef3.xml
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\assets\output\WinFormDemo.exe.config
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\obj\Debug\WinFormDemo.exe
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\obj\Debug\WinFormDemo.pdb
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\assets\output\WinFormDemo.exe
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\assets\output\WinFormDemo.pdb
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\assets\output\Microsoft.QualityTools.Testing.Fakes.dll
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\assets\output\MySql.Data.dll
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\assets\output\Cef3.dll
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\assets\output\cwber.pdb
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\assets\output\Cef3.pdb
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\assets\output\Cef3.xml
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\obj\Debug\WinFormDemo.csprojResolveAssemblyReference.cache
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\obj\Debug\WinFormDemo.Form1.resources
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\obj\Debug\WinFormDemo.Form2.resources
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\obj\Debug\WinFormDemo.Main.resources
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\obj\Debug\WinFormDemo.Properties.Resources.resources
+D:\_git_repository\zhurou\zhurou\source\cwber\WinFormDemo\obj\Debug\WinFormDemo.csproj.GenerateResource.Cache

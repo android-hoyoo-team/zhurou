@@ -77,7 +77,7 @@ namespace per.cz.wpfFrame.bridge
                 result.result = ex.StackTrace;
                 return result.toJson();
             }
-            Result<string> res = HttpUtils.http_string_response(json, null);
+            Result<Object> res = HttpUtils.http_string_response(json, null);
             Console.WriteLine(res.toJson());
             string _status = res.status.ToString();
             int status = 0;

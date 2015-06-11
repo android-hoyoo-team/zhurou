@@ -51,10 +51,10 @@ namespace per.cz.util
               
              
              */
-        public static Result<string> http_string_response(string jsonParam, CookieCollection cookies)
+        public static Result<Object> http_string_response(string jsonParam, CookieCollection cookies)
         {
 
-            Result<string> res = new Result<string>();
+            Result<Object> res = new Result<Object>();
             Result<object> hres = http(jsonParam, cookies);
             if (!hres.status.Equals("success"))
             {
@@ -63,15 +63,15 @@ namespace per.cz.util
                 return res;
             }
             return _get_result_from_response(hres.result as HttpWebResponse);
-          
+
             //string cookieString = response.Headers["Set-Cookie"];
             //Console.WriteLine(response.Headers["Content-Type"]);
             // Console.WriteLine(response.StatusCode);
-            
-           
+
+
             // Console.WriteLine(10);
 
-          
+
             //return request.GetResponse() as HttpWebResponse;
         }
         public static Result<Object> http(string jsonParam, CookieCollection cookies)
@@ -235,12 +235,12 @@ namespace per.cz.util
                 res.result = ex.StackTrace;
                 return res;
             }
-           
+
         }
-        public static Result<string> http_string_response(string method, string url, string data, CookieCollection cookies)
+        public static Result<Object> http_string_response(string method, string url, string data, CookieCollection cookies)
         {
 
-            Result<string> res = new Result<string>();
+            Result<Object> res = new Result<Object>();
             Result<object> hres = http(method, url, data, cookies);
             if (!hres.status.Equals("success"))
             {
@@ -251,9 +251,9 @@ namespace per.cz.util
             return _get_result_from_response(hres.result as HttpWebResponse);
             // Console.WriteLine(10);
         }
-        private static Result<string> _get_result_from_response(HttpWebResponse response)
+        private static Result<Object> _get_result_from_response(HttpWebResponse response)
         {
-            Result<string> res = new Result<string>();
+            Result<Object> res = new Result<Object>();
             //string cookieString = response.Headers["Set-Cookie"];
             //Console.WriteLine(response.Headers["Content-Type"]);
             // Console.WriteLine(response.StatusCode);
@@ -277,9 +277,11 @@ namespace per.cz.util
                     res.message = response.StatusCode.ToString();
                     res.status = (int)response.StatusCode;
                     Console.WriteLine(sb.ToString());
-                    res.result = sb.ToString().Trim();//.Replace("\"","\\\"");
+                    Dictionary<string, Object> r = new Dictionary<string, Object>();
+                    r.Add("body", sb.ToString().Trim());
+                    res.result = r;//.Replace("\"","\\\"");
                     if (headers.Count > 0)
-                        res.header = headers;
+                        r.Add("header", headers);
                     return res;
                 }
             }
@@ -291,11 +293,11 @@ namespace per.cz.util
                 return res;
             }
         }
-        public static Result<string> http_string_response(string method, string url, IDictionary<string, object> data , CookieCollection cookies)
+        public static Result<Object> http_string_response(string method, string url, IDictionary<string, object> data, CookieCollection cookies)
         {
 
-            Result<string> res = new Result<string>();
-            Result<object> hres = http(method, url, data,cookies);
+            Result<Object> res = new Result<Object>();
+            Result<object> hres = http(method, url, data, cookies);
             if (!hres.status.Equals("success"))
             {
                 res.message = hres.message;
@@ -309,7 +311,7 @@ namespace per.cz.util
 
             //return request.GetResponse() as HttpWebResponse;
         }
-        public static Result<Object> http(string method, string url, IDictionary<string, object> data ,CookieCollection cookies)
+        public static Result<Object> http(string method, string url, IDictionary<string, object> data, CookieCollection cookies)
         {
             Result<Object> res = new Result<Object>();
 
@@ -321,7 +323,8 @@ namespace per.cz.util
             int? timeout = 2000;
             //IDictionary<string, object> data = null;
             HttpWebRequest request = null;
-            try{
+            try
+            {
                 //如果是发送HTTPS请求  
                 if (url.StartsWith("https", StringComparison.OrdinalIgnoreCase))
                 {
@@ -440,7 +443,7 @@ namespace per.cz.util
                 }
                 //如果需要POST数据  
                 StringBuilder buffer = new StringBuilder();
-                if (data != null &&!data.ToString().Trim().Equals(""))
+                if (data != null && !data.ToString().Trim().Equals(""))
                 {
                     buffer.Append(data);
                     Console.WriteLine(buffer.ToString());
@@ -483,7 +486,7 @@ namespace per.cz.util
             // myWebClient.Encoding = Encoding.GetEncoding("gb2312");
             //myWebClient.Encoding = System.Text.Encoding.Unicode;
             myWebClient.QueryString["new_file_name"] = new_file_name;
-            if (dir_name != null &&! dir_name.Trim().ToString().Equals(""))
+            if (dir_name != null && !dir_name.Trim().ToString().Equals(""))
                 myWebClient.QueryString["dir_name"] = dir_name;
             // myWebClient.QueryString["Encoding"] = "utf-8";
             // myWebClient.QueryString["Encoding1"] = "哈哈";

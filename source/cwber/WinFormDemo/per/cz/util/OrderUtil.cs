@@ -164,7 +164,7 @@ namespace per.cz.util
                     param.Add("item_number", item_number);
                     param.Add("order_lead_time", order_lead_time.ToShortDateString());
                     param.Add("count", count);
-                    Result<string> _res = HttpUtils.http_string_response("post", url, param, null);
+                    Result<Object> _res = HttpUtils.http_string_response("post", url, param, null);
                     if (_res.status.Equals("error"))
                     {
                         s[8] = "保存失败，失败信息[" + _res.message + "]";
@@ -560,7 +560,7 @@ namespace per.cz.util
                 Dictionary<string, object> last = new Dictionary<string, object>();
                 Dictionary<string, object> pi = new Dictionary<string, object>();
                 pi.Add("objects", successList);
-                Result<string> _res = HttpUtils.http_string_response("put", url, JsonUtils.ToJson(pi), null);
+                Result<Object> _res = HttpUtils.http_string_response("put", url, JsonUtils.ToJson(pi), null);
                 if (_res.status.Equals("error"))
                 {
                     _res.status = 0;
